@@ -39,5 +39,19 @@ int main(void) {
   }
 }
 
+float mc_pi(int x){
+  float k, ds=0, dc=0, c1, c2, dis, val;
+  
+  for(k=1; k<x; k++){
+    c1 = frandom();
+    c2 = frandom();
+    dis = sqrt((c1*c1)+(c2*c2));
+    if (dis<1){ 
+      dc++;}
+    else {ds++;}
+  }
+  val = 4*(dc/(ds+dc));
+  return val;
+}
 
 
